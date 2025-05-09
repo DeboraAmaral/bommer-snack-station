@@ -29,7 +29,7 @@ const HeroSection = () => {
           
           <div className="relative hidden md:block">
             <img 
-              src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80" 
+              src="./assets/Banner Café.jpg"  
               alt="Bommer Banner" 
               className="rounded-2xl shadow-2xl object-cover"
             />

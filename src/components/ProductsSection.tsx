@@ -12,10 +12,10 @@ const ProductsSection = () => {
   const products = [
     {
       id: 1,
-      name: "Pipoca Caramelizada",
+      name: "Pipoca Caramelo",
       price: "R$ 15,90",
       description: "Nossa clássica pipoca com cobertura de caramelo crocante.",
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?q=80",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80",
       badge: "Mais Vendido",
       badgeColor: "bg-bommer-orange text-white"
     },
@@ -37,6 +37,13 @@ const ProductsSection = () => {
     },
     {
       id: 4,
+      name: "Pipoca Gourmet Mix",
+      price: "R$ 22,90",
+      description: "Mix de sabores especiais: caramelo, chocolate e cheddar.",
+      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80"
+    },
+    {
+      id: 5,
       name: "Pipoca Gourmet Mix",
       price: "R$ 22,90",
       description: "Mix de sabores especiais: caramelo, chocolate e cheddar.",

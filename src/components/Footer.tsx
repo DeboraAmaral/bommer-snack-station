@@ -7,9 +7,11 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <a href="/" className="text-3xl font-bold inline-block mb-4">
-              <span className="text-bommer-orange">B</span>
-              <span className="text-bommer-green">o</span>
-              <span className="text-white">mmer</span>
+              <img 
+                src="./assets/logo.png" 
+                alt="Bommer Logo" 
+                className="h-10" 
+              />
             </a>
             <p className="text-gray-400 max-w-xs">
               Bommer oferece experiências gastronômicas com pipocas artesanais, torresmo crocante e café de alta qualidade.
@@ -20,6 +22,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Home
+                </a>
+              </li>
               <li>
                 <a href="#products" className="text-gray-400 hover:text-white transition-colors">
                   Produtos

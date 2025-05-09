@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -6,19 +6,24 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white sticky top-0 z-50 shadow-sm">
+     <nav className="bg-white sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-bommer-black">
-              <span className="text-bommer-orange">B</span>
-              <span className="text-bommer-green">o</span>
-              <span className="text-bommer-black">mmer</span>
-            </a>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="./assets/logo.png" 
+                alt="Bommer Logo" 
+                className="h-10" 
+              />
+            </Link>
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
+            <a href="#" className="text-bommer-black hover:text-bommer-orange transition-colors font-medium">
+              Home
+            </a>
             <a href="#products" className="text-bommer-black hover:text-bommer-orange transition-colors font-medium">
               Produtos
             </a>
@@ -29,7 +34,7 @@ const Navbar = () => {
               Contato
             </a>
             <a href="#order" className="btn btn-primary px-4 py-2">
-              Pedir Agora
+              Comprar Agora
             </a>
           </div>
           
@@ -48,6 +53,13 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden mt-4 pt-4 pb-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
+              <a 
+                href="#" 
+                className="text-bommer-black hover:text-bommer-orange transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </a>
               <a 
                 href="#products" 
                 className="text-bommer-black hover:text-bommer-orange transition-colors font-medium"
@@ -74,7 +86,7 @@ const Navbar = () => {
                 className="btn btn-primary px-4 py-2 w-full text-center"
                 onClick={() => setIsOpen(false)}
               >
-                Pedir Agora
+                Comprar Agora
               </a>
             </div>
           </div>
