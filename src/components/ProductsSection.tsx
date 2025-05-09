@@ -6,94 +6,46 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ShoppingCart } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
 
 const ProductsSection = () => {
-  const { toast } = useToast();
-  
   const products = [
     {
       id: 1,
       name: "Pipoca Caramelizada",
       price: "R$ 15,90",
       description: "Nossa clássica pipoca com cobertura de caramelo crocante.",
-      image: "/lovable-uploads/cd9d5b6b-0057-45ac-87c7-0736e661db6c.png",
+      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?q=80",
       badge: "Mais Vendido",
       badgeColor: "bg-bommer-orange text-white"
     },
     {
       id: 2,
-      name: "Torresmo Tradicional",
+      name: "Torresmo Premium",
       price: "R$ 18,50",
       description: "Torresmo crocante e macio, temperado com nossa receita exclusiva.",
-      image: "/lovable-uploads/00e244ff-b5fd-4d2a-9808-feb5201342fe.png",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80",
       badge: "Novidade",
       badgeColor: "bg-bommer-green text-white"
     },
     {
       id: 3,
-      name: "Pipoca com Chocolate",
-      price: "R$ 17,90",
-      description: "Deliciosa pipoca caramelizada com cobertura de chocolate ao leite.",
-      image: "/lovable-uploads/cf653b62-6b04-45e1-ae52-c1d667bd6dbc.png"
+      name: "Café Especial",
+      price: "R$ 12,90",
+      description: "Grãos selecionados com torra média e notas de chocolate.",
+      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80"
     },
     {
       id: 4,
-      name: "Pipoca Chocolate Branco",
-      price: "R$ 17,90",
-      description: "Pipoca caramelizada com delicada cobertura de chocolate branco.",
-      image: "/lovable-uploads/b18a5dad-9702-4930-939b-83717115dbfb.png"
-    },
-    {
-      id: 5,
-      name: "Pipoca Colorida Circus",
-      price: "R$ 19,90",
-      description: "Mix de pipocas coloridas e caramelizadas, especial para festas.",
-      image: "/lovable-uploads/6b4725cb-41e3-499a-b8c6-be22821094fe.png"
-    },
-    {
-      id: 6,
-      name: "Pipoca de Coco",
-      price: "R$ 16,90",
-      description: "Pipoca doce caramelizada com delicioso sabor de coco.",
-      image: "/lovable-uploads/748bf998-f77f-414b-b0fe-51e96cea8c52.png"
-    },
-    {
-      id: 7,
-      name: "Pipoca Flor de Sal",
-      price: "R$ 16,90",
-      description: "Pipoca caramelizada com toque especial de flor de sal.",
-      image: "/lovable-uploads/5d0221d2-6467-49f9-b7c5-41a2415870fb.png"
-    },
-    {
-      id: 8,
-      name: "Torresmo Limão",
-      price: "R$ 18,90",
-      description: "Torresmo artesanal com toque refrescante de limão.",
-      image: "/lovable-uploads/7ed604ed-ddcc-4b5e-a1a5-e710f97ef6c1.png"
-    },
-    {
-      id: 9,
-      name: "Torresmo Pimenta",
-      price: "R$ 18,90",
-      description: "Torresmo artesanal com tempero picante de pimenta.",
-      image: "/lovable-uploads/e43d51f8-6c3e-45cf-bebf-bcd855d8c557.png"
+      name: "Pipoca Gourmet Mix",
+      price: "R$ 22,90",
+      description: "Mix de sabores especiais: caramelo, chocolate e cheddar.",
+      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80"
     }
   ];
-  
-  const handleAddToCart = () => {
-    toast({
-      title: "Acesso à loja",
-      description: "Visite nossa loja para adicionar produtos ao carrinho",
-    });
-  };
 
   return (
-    <section id="products" className="py-16 md:py-24 bg-gray-50">
+    <section id="products" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
           <div>
@@ -102,13 +54,6 @@ const ProductsSection = () => {
               Experimente o melhor da Bommer com nossos produtos artesanais feitos com ingredientes de alta qualidade
             </p>
           </div>
-          <Link 
-            to="/loja"
-            className="mt-4 md:mt-0 bg-bommer-orange hover:bg-bommer-orange/90 text-white px-6 py-2 rounded-lg flex items-center"
-          >
-            <ShoppingCart className="mr-2 h-5 w-5" />
-            Ver Loja
-          </Link>
         </div>
         
         <div className="mt-12 px-4">
@@ -122,19 +67,15 @@ const ProductsSection = () => {
             <CarouselContent>
               {products.map((product) => (
                 <CarouselItem key={product.id} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-4">
-                  <div className="bg-white rounded-3xl shadow-lg overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-                    <div className="relative">
-                      <AspectRatio ratio={1}>
-                        <img 
-                          src={product.image} 
-                          alt={product.name} 
-                          className={cn(
-                            "w-full h-full object-cover transition-transform duration-500 hover:scale-105",
-                          )}
-                        />
-                      </AspectRatio>
+                  <div className="bg-white rounded-3xl shadow-md overflow-hidden h-full flex flex-col">
+                    <div className="relative h-56">
+                      <img 
+                        src={product.image} 
+                        alt={product.name} 
+                        className="w-full h-full object-cover"
+                      />
                       {product.badge && (
-                        <span className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${product.badgeColor}`}>
+                        <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-medium ${product.badgeColor}`}>
                           {product.badge}
                         </span>
                       )}
@@ -142,11 +83,11 @@ const ProductsSection = () => {
                     <div className="p-6 flex-grow flex flex-col">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
                       <p className="text-gray-600 mb-4 flex-grow">{product.description}</p>
-                      <div className="flex items-center justify-between mt-auto">
-                        <span className="text-xl font-bold text-bommer-black">{product.price}</span>
-                        <Link to="/loja" className="btn btn-primary p-3 rounded-full hover:scale-110 transition-transform duration-200">
+                      <div className="flex items-center justify-between">
+                        <span className="text-lg font-bold text-bommer-black">{product.price}</span>
+                        <button className="btn btn-primary p-2 rounded-full">
                           <ShoppingCart className="w-5 h-5" />
-                        </Link>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -154,8 +95,8 @@ const ProductsSection = () => {
               ))}
             </CarouselContent>
             <div className="flex justify-end gap-2 mt-8">
-              <CarouselPrevious className="static transform-none rounded-full border-bommer-orange text-bommer-orange hover:bg-bommer-orange hover:text-white transition-colors" />
-              <CarouselNext className="static transform-none rounded-full border-bommer-orange text-bommer-orange hover:bg-bommer-orange hover:text-white transition-colors" />
+              <CarouselPrevious className="static transform-none rounded-full border-bommer-orange text-bommer-orange hover:bg-bommer-orange hover:text-white" />
+              <CarouselNext className="static transform-none rounded-full border-bommer-orange text-bommer-orange hover:bg-bommer-orange hover:text-white" />
             </div>
           </Carousel>
         </div>

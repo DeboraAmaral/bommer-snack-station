@@ -8,25 +8,23 @@ const CategoriesSection = () => {
       id: 1,
       name: "Pipocas Gourmet",
       icon: "🍿",
-      bgColor: "bg-bommer-orange/10",
+      bgColor: "bg-amber-50",
       description: "Deliciosas pipocas em sabores exclusivos",
-      link: "#products",
-      image: "/lovable-uploads/cd9d5b6b-0057-45ac-87c7-0736e661db6c.png"
+      link: "#products"
     },
     {
       id: 2,
       name: "Torresmo Artesanal",
       icon: "🥓",
-      bgColor: "bg-bommer-green/10",
+      bgColor: "bg-orange-50",
       description: "Crocante e irresistível torresmo caseiro",
-      link: "#products",
-      image: "/lovable-uploads/7ed604ed-ddcc-4b5e-a1a5-e710f97ef6c1.png"
+      link: "#products"
     },
     {
       id: 3,
       name: "Café Especial",
       icon: "☕",
-      bgColor: "bg-amber-100",
+      bgColor: "bg-green-50",
       description: "Grãos selecionados e torra perfeita",
       link: "#products"
     },
@@ -34,7 +32,7 @@ const CategoriesSection = () => {
       id: 4,
       name: "Combos & Pacotes",
       icon: "🎁",
-      bgColor: "bg-gray-100",
+      bgColor: "bg-gray-50",
       description: "Combinações especiais para todos os gostos",
       link: "#products"
     }
@@ -62,19 +60,9 @@ const CategoriesSection = () => {
               className="border-none shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               <CardContent className="p-6">
-                {category.image ? (
-                  <div className="mb-6 h-40 overflow-hidden rounded-xl">
-                    <img 
-                      src={category.image} 
-                      alt={category.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ) : (
-                  <div className={`${category.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}>
-                    <span className="text-3xl">{category.icon}</span>
-                  </div>
-                )}
+                <div className={`${category.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}>
+                  <span className="text-3xl">{category.icon}</span>
+                </div>
                 <h3 className="text-xl font-bold mb-2">{category.name}</h3>
                 <p className="text-gray-600 mb-4">{category.description}</p>
                 <a 

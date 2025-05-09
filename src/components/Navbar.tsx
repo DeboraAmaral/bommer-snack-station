@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,20 +10,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/1667d307-5c7e-4bfa-afec-3de03377a04d.png" 
-                alt="Bommer Logo" 
-                className="h-10" 
-              />
-            </Link>
+            <a href="/" className="text-2xl font-bold text-bommer-black">
+              <span className="text-bommer-orange">B</span>
+              <span className="text-bommer-green">o</span>
+              <span className="text-bommer-black">mmer</span>
+            </a>
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/loja" className="text-bommer-black hover:text-bommer-orange transition-colors font-medium flex items-center">
-              <ShoppingCart className="mr-2 h-5 w-5" /> Loja
-            </Link>
             <a href="#products" className="text-bommer-black hover:text-bommer-orange transition-colors font-medium">
               Produtos
             </a>
@@ -33,6 +27,9 @@ const Navbar = () => {
             </a>
             <a href="#contact" className="text-bommer-black hover:text-bommer-orange transition-colors font-medium">
               Contato
+            </a>
+            <a href="#order" className="btn btn-primary px-4 py-2">
+              Pedir Agora
             </a>
           </div>
           
@@ -51,13 +48,6 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden mt-4 pt-4 pb-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <Link 
-                to="/loja" 
-                className="text-bommer-black hover:text-bommer-orange transition-colors font-medium flex items-center"
-                onClick={() => setIsOpen(false)}
-              >
-                <ShoppingCart className="mr-2 h-5 w-5" /> Loja
-              </Link>
               <a 
                 href="#products" 
                 className="text-bommer-black hover:text-bommer-orange transition-colors font-medium"
@@ -78,6 +68,13 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Contato
+              </a>
+              <a 
+                href="#order" 
+                className="btn btn-primary px-4 py-2 w-full text-center"
+                onClick={() => setIsOpen(false)}
+              >
+                Pedir Agora
               </a>
             </div>
           </div>
