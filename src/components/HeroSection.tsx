@@ -1,44 +1,47 @@
 
+import { ArrowRight } from 'lucide-react';
+
 const HeroSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-white to-orange-50">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 items-center gap-12">
-        <div className="text-left animate-fade-in">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-            <span className="block text-bommer-black">Sabor e</span>
-            <span className="block text-bommer-orange">Qualidade</span>
-            <span className="block text-bommer-green">em Cada Mordida</span>
-          </h1>
-          <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-md">
-            Deliciosas pipocas, torresmo crocante e café fresco para todos os momentos.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="#products" className="btn btn-primary px-8 py-3 text-base font-bold">
-              Ver Produtos
-            </a>
-            <a href="#order" className="btn btn-secondary px-8 py-3 text-base font-bold">
-              Pedir Agora
-            </a>
+    <section className="relative bg-gradient-to-r from-amber-50 to-orange-50 overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80')] bg-cover bg-center opacity-10"></div>
+      <div className="container mx-auto px-4 py-24 relative">
+        <div className="grid md:grid-cols-2 items-center gap-12">
+          <div className="text-left animate-fade-in">
+            <span className="inline-block px-4 py-1 bg-bommer-orange/10 text-bommer-orange rounded-full mb-6 font-medium">Sabor de qualidade</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+              <span className="block text-bommer-black">Descubra o sabor</span>
+              <span className="block text-bommer-orange mt-2">autêntico da</span>
+              <span className="block text-bommer-green mt-2">Bommer</span>
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-md">
+              Deliciosas pipocas, torresmo crocante e café fresco para todos os momentos especiais do seu dia.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <a href="#products" className="btn btn-primary px-8 py-4 text-base font-bold">
+                Ver Produtos
+              </a>
+              <a href="#categories" className="btn bg-white border border-gray-200 text-bommer-black hover:bg-gray-50 px-8 py-4 text-base font-bold flex items-center">
+                Explorar Categorias <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </div>
           </div>
-        </div>
-        
-        <div className="relative">
-          <div className="aspect-square bg-bommer-orange/10 rounded-full absolute -top-4 -right-4 w-3/4 h-3/4"></div>
-          <div className="aspect-square bg-bommer-green/10 rounded-full absolute -bottom-4 -left-4 w-1/2 h-1/2"></div>
           
-          <div className="relative bg-white p-6 rounded-3xl shadow-xl">
-            <div className="grid grid-cols-2 gap-6">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-orange-100 flex items-center justify-center">
-                <div className="transform -rotate-12 text-6xl">🍿</div>
-              </div>
-              <div className="aspect-square rounded-2xl overflow-hidden bg-amber-100 flex items-center justify-center">
-                <div className="transform rotate-12 text-6xl">🥓</div>
-              </div>
-              <div className="aspect-square rounded-2xl overflow-hidden bg-green-100 flex items-center justify-center">
-                <div className="transform -rotate-6 text-6xl">☕</div>
-              </div>
-              <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-bommer-orange/20 to-bommer-green/20 flex items-center justify-center">
-                <span className="text-3xl font-bold text-bommer-black">Bommer</span>
+          <div className="relative hidden md:block">
+            <img 
+              src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80" 
+              alt="Bommer Banner" 
+              className="rounded-2xl shadow-2xl object-cover"
+            />
+            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
+              <div className="flex items-center gap-3">
+                <div className="bg-bommer-orange/10 p-2 rounded-full">
+                  <div className="text-2xl">🍿</div>
+                </div>
+                <div>
+                  <p className="font-bold">100% Natural</p>
+                  <p className="text-sm text-gray-500">Ingredientes selecionados</p>
+                </div>
               </div>
             </div>
           </div>

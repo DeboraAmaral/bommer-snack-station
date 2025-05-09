@@ -1,54 +1,59 @@
 
+import { ArrowRight } from 'lucide-react';
+
 const AboutSection = () => {
+  const stats = [
+    { value: "10+", label: "Anos de experiência" },
+    { value: "5k", label: "Clientes satisfeitos" },
+    { value: "20+", label: "Variedades de produtos" }
+  ];
+
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <h2 className="section-title">Nossa História</h2>
-            <p className="mt-6 text-gray-600 text-lg">
-              A Bommer nasceu da paixão por sabores autênticos e da vontade de criar experiências gastronômicas memoráveis. Fundada em 2010, começamos como uma pequena barraca vendendo apenas pipoca gourmet.
-            </p>
-            <p className="mt-4 text-gray-600 text-lg">
-              Com o tempo, expandimos nosso cardápio para incluir torresmo artesanal e café especial, sempre mantendo nosso compromisso com a qualidade e o sabor incomparável.
-            </p>
-            <p className="mt-4 text-gray-600 text-lg">
-              Hoje, a Bommer é referência em snacks artesanais, combinando tradição e inovação para criar produtos que encantam nossos clientes em cada mordida.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-6">
-              <div>
-                <h4 className="text-4xl font-bold text-bommer-orange">10+</h4>
-                <p className="text-gray-500 mt-1">Anos de experiência</p>
-              </div>
-              <div>
-                <h4 className="text-4xl font-bold text-bommer-green">5k</h4>
-                <p className="text-gray-500 mt-1">Clientes satisfeitos</p>
-              </div>
-              <div>
-                <h4 className="text-4xl font-bold text-bommer-black">20+</h4>
-                <p className="text-gray-500 mt-1">Variedades de produtos</p>
+          <div className="relative">
+            <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[90%] bg-bommer-orange/5 rounded-full"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80" 
+              alt="Sobre a Bommer" 
+              className="rounded-3xl shadow-xl object-cover"
+            />
+            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">
+              <div className="flex items-center gap-3">
+                <div className="bg-bommer-green/10 p-3 rounded-full">
+                  <span className="text-3xl">🌱</span>
+                </div>
+                <div>
+                  <p className="font-bold text-lg">Sustentabilidade</p>
+                  <p className="text-gray-500">Compromisso com o meio ambiente</p>
+                </div>
               </div>
             </div>
           </div>
           
-          <div className="order-1 md:order-2 relative">
-            <div className="aspect-square rounded-full bg-bommer-orange/10 absolute -top-5 -left-5 w-40 h-40"></div>
-            <div className="aspect-square rounded-full bg-bommer-green/10 absolute -bottom-5 -right-5 w-60 h-60"></div>
+          <div>
+            <span className="inline-block px-4 py-1 bg-bommer-green/10 text-bommer-green rounded-full mb-6 font-medium">Nossa história</span>
+            <h2 className="section-title mb-6">Tradição e qualidade desde 2010</h2>
+            <p className="text-lg text-gray-700 mb-4">
+              A Bommer nasceu da paixão por sabores autênticos e da vontade de criar experiências gastronômicas memoráveis. Fundada em 2010, começamos como uma pequena barraca vendendo apenas pipoca gourmet.
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              Com o tempo, expandimos nosso cardápio para incluir torresmo artesanal e café especial, sempre mantendo nosso compromisso com a qualidade e o sabor incomparável.
+            </p>
             
-            <div className="relative grid grid-cols-2 gap-4">
-              <div className="aspect-square bg-white rounded-3xl shadow-md p-4 flex items-center justify-center">
-                <div className="text-6xl transform -rotate-12">🍿</div>
-              </div>
-              <div className="aspect-square bg-bommer-orange/10 rounded-3xl shadow-md p-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-bommer-black">Est. 2010</span>
-              </div>
-              <div className="aspect-square bg-bommer-green/10 rounded-3xl shadow-md p-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-bommer-black">Artesanal</span>
-              </div>
-              <div className="aspect-square bg-white rounded-3xl shadow-md p-4 flex items-center justify-center">
-                <div className="text-6xl transform rotate-12">☕</div>
-              </div>
+            <div className="grid grid-cols-3 gap-6 mb-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center p-4 border border-gray-100 rounded-xl">
+                  <h3 className="text-3xl font-bold text-bommer-black">{stat.value}</h3>
+                  <p className="text-sm text-gray-500">{stat.label}</p>
+                </div>
+              ))}
             </div>
+            
+            <a href="#contact" className="btn btn-secondary px-8 py-3 text-base font-bold flex items-center w-fit">
+              Conheça mais sobre nós <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>
