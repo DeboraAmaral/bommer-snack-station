@@ -6,12 +6,14 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
-            <a href="/" className="text-3xl font-bold inline-block mb-4">
-              <span className="text-bommer-orange">B</span>
-              <span className="text-bommer-green">o</span>
-              <span className="text-white">mmer</span>
+            <a href="/" className="inline-block mb-4">
+              <img 
+                src="/lovable-uploads/1667d307-5c7e-4bfa-afec-3de03377a04d.png" 
+                alt="Bommer Logo" 
+                className="h-12" 
+              />
             </a>
-            <p className="text-gray-400 max-w-xs">
+            <p className="text-gray-400 max-w-xs mt-4">
               Bommer oferece experiências gastronômicas com pipocas artesanais, torresmo crocante e café de alta qualidade.
             </p>
           </div>

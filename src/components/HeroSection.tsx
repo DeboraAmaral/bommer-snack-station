@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="relative bg-gradient-to-r from-amber-50 to-orange-50 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/cd9d5b6b-0057-45ac-87c7-0736e661db6c.png')] bg-cover bg-center opacity-10"></div>
       <div className="container mx-auto px-4 py-24 relative">
         <div className="grid md:grid-cols-2 items-center gap-12">
           <div className="text-left animate-fade-in">
@@ -29,8 +29,8 @@ const HeroSection = () => {
           
           <div className="relative hidden md:block">
             <img 
-              src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80" 
-              alt="Bommer Banner" 
+              src="/lovable-uploads/cd9d5b6b-0057-45ac-87c7-0736e661db6c.png" 
+              alt="Bommer Pipoca Caramelo" 
               className="rounded-2xl shadow-2xl object-cover"
             />
             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">

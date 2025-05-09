@@ -15,32 +15,67 @@ const ProductsSection = () => {
       name: "Pipoca Caramelizada",
       price: "R$ 15,90",
       description: "Nossa clássica pipoca com cobertura de caramelo crocante.",
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?q=80",
+      image: "/lovable-uploads/cd9d5b6b-0057-45ac-87c7-0736e661db6c.png",
       badge: "Mais Vendido",
       badgeColor: "bg-bommer-orange text-white"
     },
     {
       id: 2,
-      name: "Torresmo Premium",
+      name: "Torresmo Tradicional",
       price: "R$ 18,50",
       description: "Torresmo crocante e macio, temperado com nossa receita exclusiva.",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80",
+      image: "/lovable-uploads/00e244ff-b5fd-4d2a-9808-feb5201342fe.png",
       badge: "Novidade",
       badgeColor: "bg-bommer-green text-white"
     },
     {
       id: 3,
-      name: "Café Especial",
-      price: "R$ 12,90",
-      description: "Grãos selecionados com torra média e notas de chocolate.",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80"
+      name: "Pipoca com Chocolate",
+      price: "R$ 17,90",
+      description: "Deliciosa pipoca caramelizada com cobertura de chocolate ao leite.",
+      image: "/lovable-uploads/cf653b62-6b04-45e1-ae52-c1d667bd6dbc.png"
     },
     {
       id: 4,
-      name: "Pipoca Gourmet Mix",
-      price: "R$ 22,90",
-      description: "Mix de sabores especiais: caramelo, chocolate e cheddar.",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80"
+      name: "Pipoca Chocolate Branco",
+      price: "R$ 17,90",
+      description: "Pipoca caramelizada com delicada cobertura de chocolate branco.",
+      image: "/lovable-uploads/b18a5dad-9702-4930-939b-83717115dbfb.png"
+    },
+    {
+      id: 5,
+      name: "Pipoca Colorida Circus",
+      price: "R$ 19,90",
+      description: "Mix de pipocas coloridas e caramelizadas, especial para festas.",
+      image: "/lovable-uploads/6b4725cb-41e3-499a-b8c6-be22821094fe.png"
+    },
+    {
+      id: 6,
+      name: "Pipoca de Coco",
+      price: "R$ 16,90",
+      description: "Pipoca doce caramelizada com delicioso sabor de coco.",
+      image: "/lovable-uploads/748bf998-f77f-414b-b0fe-51e96cea8c52.png"
+    },
+    {
+      id: 7,
+      name: "Pipoca Flor de Sal",
+      price: "R$ 16,90",
+      description: "Pipoca caramelizada com toque especial de flor de sal.",
+      image: "/lovable-uploads/5d0221d2-6467-49f9-b7c5-41a2415870fb.png"
+    },
+    {
+      id: 8,
+      name: "Torresmo Limão",
+      price: "R$ 18,90",
+      description: "Torresmo artesanal com toque refrescante de limão.",
+      image: "/lovable-uploads/7ed604ed-ddcc-4b5e-a1a5-e710f97ef6c1.png"
+    },
+    {
+      id: 9,
+      name: "Torresmo Pimenta",
+      price: "R$ 18,90",
+      description: "Torresmo artesanal com tempero picante de pimenta.",
+      image: "/lovable-uploads/e43d51f8-6c3e-45cf-bebf-bcd855d8c557.png"
     }
   ];
 

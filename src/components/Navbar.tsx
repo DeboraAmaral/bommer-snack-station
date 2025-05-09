@@ -10,10 +10,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-bommer-black">
-              <span className="text-bommer-orange">B</span>
-              <span className="text-bommer-green">o</span>
-              <span className="text-bommer-black">mmer</span>
+            <a href="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/1667d307-5c7e-4bfa-afec-3de03377a04d.png" 
+                alt="Bommer Logo" 
+                className="h-10" 
+              />
             </a>
           </div>
           

@@ -69,8 +69,8 @@ export default {
 				},
 				// Bommer brand colors
 				bommer: {
-					orange: "#FF7A00",
-					green: "#2C7A2A",
+					orange: "#FF5B28", // Updated to match the logo
+					green: "#8CC63F", // Updated to match product labels
 					black: "#000000",
 				}
 			},
