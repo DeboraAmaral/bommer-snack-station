@@ -6,7 +6,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ShoppingCart } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const ProductsSection = () => {
   const products = [
@@ -80,7 +82,7 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section id="products" className="py-24 bg-gray-50">
+    <section id="products" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
           <div>
@@ -102,15 +104,19 @@ const ProductsSection = () => {
             <CarouselContent>
               {products.map((product) => (
                 <CarouselItem key={product.id} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-4">
-                  <div className="bg-white rounded-3xl shadow-md overflow-hidden h-full flex flex-col">
-                    <div className="relative h-56">
-                      <img 
-                        src={product.image} 
-                        alt={product.name} 
-                        className="w-full h-full object-cover"
-                      />
+                  <div className="bg-white rounded-3xl shadow-lg overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div className="relative">
+                      <AspectRatio ratio={1}>
+                        <img 
+                          src={product.image} 
+                          alt={product.name} 
+                          className={cn(
+                            "w-full h-full object-cover transition-transform duration-500 hover:scale-105",
+                          )}
+                        />
+                      </AspectRatio>
                       {product.badge && (
-                        <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-medium ${product.badgeColor}`}>
+                        <span className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${product.badgeColor}`}>
                           {product.badge}
                         </span>
                       )}
@@ -118,9 +124,9 @@ const ProductsSection = () => {
                     <div className="p-6 flex-grow flex flex-col">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
                       <p className="text-gray-600 mb-4 flex-grow">{product.description}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-lg font-bold text-bommer-black">{product.price}</span>
-                        <button className="btn btn-primary p-2 rounded-full">
+                      <div className="flex items-center justify-between mt-auto">
+                        <span className="text-xl font-bold text-bommer-black">{product.price}</span>
+                        <button className="btn btn-primary p-3 rounded-full hover:scale-110 transition-transform duration-200">
                           <ShoppingCart className="w-5 h-5" />
                         </button>
                       </div>
@@ -130,8 +136,8 @@ const ProductsSection = () => {
               ))}
             </CarouselContent>
             <div className="flex justify-end gap-2 mt-8">
-              <CarouselPrevious className="static transform-none rounded-full border-bommer-orange text-bommer-orange hover:bg-bommer-orange hover:text-white" />
-              <CarouselNext className="static transform-none rounded-full border-bommer-orange text-bommer-orange hover:bg-bommer-orange hover:text-white" />
+              <CarouselPrevious className="static transform-none rounded-full border-bommer-orange text-bommer-orange hover:bg-bommer-orange hover:text-white transition-colors" />
+              <CarouselNext className="static transform-none rounded-full border-bommer-orange text-bommer-orange hover:bg-bommer-orange hover:text-white transition-colors" />
             </div>
           </Carousel>
         </div>
