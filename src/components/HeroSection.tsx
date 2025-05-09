@@ -2,6 +2,7 @@
 import { ArrowRight } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -20,9 +21,9 @@ const HeroSection = () => {
               Deliciosas pipocas, torresmo crocante e café fresco para todos os momentos especiais do seu dia.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a href="#products" className="btn btn-primary px-8 py-4 text-base font-bold rounded-lg shadow-lg hover:shadow-xl transition-all">
-                Ver Produtos
-              </a>
+              <Link to="/loja" className="btn btn-primary px-8 py-4 text-base font-bold rounded-lg shadow-lg hover:shadow-xl transition-all">
+                Comprar Agora
+              </Link>
               <a href="#categories" className="btn bg-white border border-gray-200 text-bommer-black hover:bg-gray-50 px-8 py-4 text-base font-bold rounded-lg shadow-md hover:shadow-lg flex items-center transition-all">
                 Explorar Categorias <ArrowRight className="ml-2 w-5 h-5" />
               </a>

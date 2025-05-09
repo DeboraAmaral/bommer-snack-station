@@ -9,8 +9,12 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const ProductsSection = () => {
+  const { toast } = useToast();
+  
   const products = [
     {
       id: 1,
@@ -80,6 +84,13 @@ const ProductsSection = () => {
       image: "/lovable-uploads/e43d51f8-6c3e-45cf-bebf-bcd855d8c557.png"
     }
   ];
+  
+  const handleAddToCart = () => {
+    toast({
+      title: "Acesso à loja",
+      description: "Visite nossa loja para adicionar produtos ao carrinho",
+    });
+  };
 
   return (
     <section id="products" className="py-16 md:py-24 bg-gray-50">
@@ -91,6 +102,13 @@ const ProductsSection = () => {
               Experimente o melhor da Bommer com nossos produtos artesanais feitos com ingredientes de alta qualidade
             </p>
           </div>
+          <Link 
+            to="/loja"
+            className="mt-4 md:mt-0 bg-bommer-orange hover:bg-bommer-orange/90 text-white px-6 py-2 rounded-lg flex items-center"
+          >
+            <ShoppingCart className="mr-2 h-5 w-5" />
+            Ver Loja
+          </Link>
         </div>
         
         <div className="mt-12 px-4">
@@ -126,9 +144,9 @@ const ProductsSection = () => {
                       <p className="text-gray-600 mb-4 flex-grow">{product.description}</p>
                       <div className="flex items-center justify-between mt-auto">
                         <span className="text-xl font-bold text-bommer-black">{product.price}</span>
-                        <button className="btn btn-primary p-3 rounded-full hover:scale-110 transition-transform duration-200">
+                        <Link to="/loja" className="btn btn-primary p-3 rounded-full hover:scale-110 transition-transform duration-200">
                           <ShoppingCart className="w-5 h-5" />
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
