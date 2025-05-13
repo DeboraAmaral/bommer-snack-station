@@ -13,12 +13,8 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '1rem',
+			padding: '2rem',
 			screens: {
-				'sm': '640px',
-				'md': '768px',
-				'lg': '1024px',
-				'xl': '1280px',
 				'2xl': '1400px'
 			}
 		},
@@ -67,15 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Bommer brand colors
-				bommer: {
-					orange: "#FF7A00",
-					green: "#2C7A2A",
-					black: "#000000",
+				ecolive: {
+					'light-green': '#8BAC3E',
+					'dark-green': '#173932',
+					'bg-light': '#F9F8F8',
+					'text-dark': '#1A1A1A',
+					'text-light': '#7E7E7E',
 				}
-			},
-			fontFamily: {
-				poppins: ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -100,21 +94,35 @@ export default {
 					}
 				},
 				'fade-in': {
-					"0%": {
-						opacity: "0",
-						transform: "translateY(10px)"
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
 					},
-					"100%": {
-						opacity: "1",
-						transform: "translateY(0)"
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
 					}
 				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out',
-			}
+				'fade-in': 'fade-in 0.3s ease-out',
+				'scale-in': 'scale-in 0.2s ease-out',
+			},
+			fontFamily: {
+				'rubik': ['Rubik', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
