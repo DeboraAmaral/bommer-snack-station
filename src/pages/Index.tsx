@@ -2,10 +2,9 @@
 import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import AboutSection from "../components/AboutSection";
 import CategorySection from '../components/CategorySection';
 import FeaturedProducts from '../components/FeaturedProducts';
-import Newsletter from '../components/Newsletter';
-import Footer from '../components/Footer';
 
 const Index = () => {
   return (
@@ -13,6 +12,7 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <Hero />
+        <AboutSection />
         <CategorySection />
         <FeaturedProducts />
         <div className="py-16 bg-white">
@@ -50,9 +50,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <Newsletter />
       </main>
-      <Footer />
     </div>
   );
 };
