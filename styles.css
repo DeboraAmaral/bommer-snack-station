@@ -518,7 +518,7 @@ button {
   transform: scale(1.05);
 }
 
-.product-actions {
+/*.product-actions {
   position: absolute;
   top: 570px;
   right: 1300px;
@@ -566,6 +566,23 @@ button {
   gap: 0.5rem;
   transform: translateX(10px);
   transition: all 0.3s ease;
+}*/
+
+.product-action-btn {
+  width: 40px;
+  height: 40px;
+  margin-left: 200px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-action-btn:hover {
+  background-color: var(--light-green);
+  color: var(--white);
 }
 
 .product-action-btn {
