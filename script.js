@@ -290,9 +290,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const heroImages = [
-  '/public/assets/banner pipoca02.jpg',
-  '/public/assets/banner cafe.jpg',
-  '/public/assets/banner torresmo.jpg'
+  'assets/banner pipoca02.jpg',
+  '/assets/banner cafe.jpg',
+  'assets/banner torresmo.jpg'
 ];
 
 const hero = document.querySelector('.hero');
