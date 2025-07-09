@@ -76,23 +76,23 @@ const products: Product[] = [
 
 const FeaturedProducts: React.FC = () => {
   return (
-    <section className="py-16 bg-ecolive-bg-light">
-      <div className="container">
-        <div className="text-center mb-12">
-          <span className="text-ecolive-light-green font-medium">Featured Products</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">Best Selling Products</h2>
-          <p className="text-ecolive-text-light max-w-2xl mx-auto">
+    <section className="py-12 md:py-16 bg-ecolive-bg-light">
+      <div className="container px-4">
+        <div className="text-center mb-8 md:mb-12">
+          <span className="text-ecolive-light-green font-medium text-sm sm:text-base">Featured Products</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4">Best Selling Products</h2>
+          <p className="text-ecolive-text-light max-w-2xl mx-auto text-sm sm:text-base">
             Our most popular products based on sales and customer satisfaction
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 md:mt-12">
           <a href="/shop" className="btn-primary">View All Products</a>
         </div>
       </div>

@@ -37,22 +37,22 @@ const categories: Category[] = [
 
 const CategorySection: React.FC = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="container">
-        <div className="text-center mb-12">
-          <span className="text-ecolive-light-green font-medium">Categories</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">Browse By Category</h2>
-          <p className="text-ecolive-text-light max-w-2xl mx-auto">
+    <section className="py-12 md:py-16 bg-white">
+      <div className="container px-4">
+        <div className="text-center mb-8 md:mb-12">
+          <span className="text-ecolive-light-green font-medium text-sm sm:text-base">Categories</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4">Browse By Category</h2>
+          <p className="text-ecolive-text-light max-w-2xl mx-auto text-sm sm:text-base">
             Discover our wide range of organic products carefully selected for quality and freshness
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {categories.map((category) => (
             <a 
               key={category.id} 
               href={`/category/${category.id}`}
-              className="group relative overflow-hidden rounded-lg h-64 flex items-end transition-transform hover:scale-[1.02]"
+              className="group relative overflow-hidden rounded-lg h-48 sm:h-56 md:h-64 flex items-end transition-transform hover:scale-[1.02]"
             >
               <img 
                 src={category.image} 
@@ -60,9 +60,9 @@ const CategorySection: React.FC = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-              <div className="relative p-6 w-full">
-                <h3 className="text-white font-medium text-xl">{category.name}</h3>
-                <p className="text-white/80 text-sm mt-1">{category.count} products</p>
+              <div className="relative p-4 md:p-6 w-full">
+                <h3 className="text-white font-medium text-lg sm:text-xl">{category.name}</h3>
+                <p className="text-white/80 text-xs sm:text-sm mt-1">{category.count} products</p>
               </div>
             </a>
           ))}

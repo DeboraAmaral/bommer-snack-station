@@ -39,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         />
         
         {/* Tags */}
-        <div className="absolute top-3 left-3 flex flex-col gap-2">
+        <div className="absolute top-2 sm:top-3 left-2 sm:left-3 flex flex-col gap-1 sm:gap-2">
           {product.isOrganic && (
             <span className="bg-ecolive-light-green text-white text-xs font-medium px-2 py-1 rounded">
               Organic
@@ -53,28 +53,28 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           )}
         </div>
 
-        {/* Quick actions */}
-        <div className={`absolute bottom-0 left-0 right-0 bg-white p-3 flex justify-between items-center transform transition-transform duration-300 ${isHovered ? 'translate-y-0' : 'translate-y-full'}`}>
-          <button className="text-ecolive-dark-green hover:text-ecolive-light-green transition-colors">
-            <Heart size={20} />
+        {/* Quick actions - Hidden on mobile, shown on hover on desktop */}
+        <div className={`absolute bottom-0 left-0 right-0 bg-white p-2 sm:p-3 flex justify-between items-center transform transition-transform duration-300 ${isHovered ? 'translate-y-0' : 'translate-y-full'} sm:${isHovered ? 'translate-y-0' : 'translate-y-full'}`}>
+          <button className="text-ecolive-dark-green hover:text-ecolive-light-green transition-colors p-1">
+            <Heart size={18} />
           </button>
-          <button className="bg-ecolive-light-green text-white py-2 px-4 rounded flex items-center gap-2 hover:opacity-90 transition-opacity text-sm">
-            Add to Cart <ShoppingCart size={16} />
+          <button className="bg-ecolive-light-green text-white py-2 px-3 sm:px-4 rounded flex items-center gap-1 sm:gap-2 hover:opacity-90 transition-opacity text-xs sm:text-sm">
+            Add <ShoppingCart size={14} />
           </button>
         </div>
       </div>
 
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <span className="text-xs text-ecolive-text-light">{product.category}</span>
-        <h3 className="font-medium text-ecolive-dark-green mt-1 hover:text-ecolive-light-green transition-colors">
+        <h3 className="font-medium text-ecolive-dark-green mt-1 hover:text-ecolive-light-green transition-colors text-sm sm:text-base">
           <a href={`/product/${product.id}`}>
             {product.name}
           </a>
         </h3>
         <div className="mt-2 flex items-center">
-          <span className="font-medium text-ecolive-light-green">${product.price.toFixed(2)}</span>
+          <span className="font-medium text-ecolive-light-green text-sm sm:text-base">${product.price.toFixed(2)}</span>
           {product.oldPrice && (
-            <span className="ml-2 text-sm text-ecolive-text-light line-through">${product.oldPrice.toFixed(2)}</span>
+            <span className="ml-2 text-xs sm:text-sm text-ecolive-text-light line-through">${product.oldPrice.toFixed(2)}</span>
           )}
         </div>
       </div>
