@@ -288,3 +288,33 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   document.head.appendChild(animationStyle);
 });
+
+const heroImages = [
+  '/public/assets/banner pipoca02.jpg',
+  '/public/assets/banner cafe.jpg',
+  '/public/assets/banner torresmo.jpg'
+];
+
+const hero = document.querySelector('.hero');
+
+let currentSlide = 0;
+
+function createSlides() {
+  heroImages.forEach((imgUrl, index) => {
+    const div = document.createElement('div');
+    div.classList.add('hero-slide');
+    if (index === 0) div.classList.add('active');
+    div.style.backgroundImage = `url('${imgUrl}')`;
+    hero.appendChild(div);
+  });
+}
+
+function nextSlide() {
+  const slides = document.querySelectorAll('.hero-slide');
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+createSlides();
+setInterval(nextSlide, 5000);
