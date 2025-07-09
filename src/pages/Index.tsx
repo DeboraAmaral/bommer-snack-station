@@ -5,8 +5,6 @@ import Hero from '../components/Hero';
 import AboutSection from "../components/AboutSection";
 import CategorySection from '../components/CategorySection';
 import FeaturedProducts from '../components/FeaturedProducts';
-import Footer from '../components/Footer';
-import WhatsAppButton from '../components/WhatsAppButton';
 
 const Index = () => {
   return (
@@ -53,8 +51,6 @@ const Index = () => {
           </div>
         </div>
       </main>
-      <Footer />
-      <WhatsAppButton />
     </div>
   );
 };
