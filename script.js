@@ -290,9 +290,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const heroImages = [
-  'assets/banner pipoca02.jpg',
+  'https://receitadaboa.com.br/wp-content/uploads/2024/03/delicious-popcorn-1-scaled.jpg',
   '/assets/banner cafe.jpg',
-  'assets/banner torresmo.jpg'
+  'https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia16208/pele-a-pururuca-artigos-cursos-cpt.jpg'
 ];
 
 const hero = document.querySelector('.hero');
