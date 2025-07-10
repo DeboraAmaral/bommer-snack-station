@@ -318,3 +318,15 @@ function nextSlide() {
 
 createSlides();
 setInterval(nextSlide, 5000);
+
+function createSlides() {
+  heroImages.forEach((imgUrl, index) => {
+    const div = document.createElement('div');
+    div.classList.add('hero-slide');
+    if (index === 0) div.classList.add('active');
+    div.style.backgroundImage = `url('${imgUrl}')`;
+    hero.appendChild(div);
+
+    console.log(`Slide ${index} com imagem: ${imgUrl}`);
+  });
+}
