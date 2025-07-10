@@ -1,10 +1,10 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import AboutSection from "../components/AboutSection";
 import CategorySection from '../components/CategorySection';
 import FeaturedProducts from '../components/FeaturedProducts';
+import PartnersSection from '../components/PartnersSection';
 
 const Index = () => {
   return (
@@ -15,6 +15,7 @@ const Index = () => {
         <AboutSection />
         <CategorySection />
         <FeaturedProducts />
+        <PartnersSection />
         <div className="py-12 md:py-16 bg-white">
           <div className="container px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
