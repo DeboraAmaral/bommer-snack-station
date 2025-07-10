@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -15,7 +16,6 @@ const Index = () => {
         <AboutSection />
         <CategorySection />
         <FeaturedProducts />
-        <PartnersSection />
         <div className="py-12 md:py-16 bg-white">
           <div className="container px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -51,6 +51,7 @@ const Index = () => {
             </div>
           </div>
         </div>
+        <PartnersSection />
       </main>
     </div>
   );
