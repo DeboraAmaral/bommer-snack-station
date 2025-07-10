@@ -26,5 +26,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "script.js"]
+  "include": ["src", "public/script.js"]
 }
