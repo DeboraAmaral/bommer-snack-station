@@ -869,6 +869,11 @@ button {
   opacity: 0.8;
 }
 
+.footer-contact a:hover {
+  opacity: 1;
+  color: var(--light-green);
+}
+
 .footer-bottom {
   display: flex;
   flex-direction: column;
