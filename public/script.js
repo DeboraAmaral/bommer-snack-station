@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const heroImages = [
   '/assets/banner-cafe02.jpg',
-  '/assets/banner-cafe.jpg',
+  '/assets/banner_capricho.png',
   '/assets/banner-cafe03.jpg'
 ];
 
